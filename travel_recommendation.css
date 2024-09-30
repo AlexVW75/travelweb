@@ -1,0 +1,735 @@
+/* Reset some default styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style the nav bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  color: white;
+}
+
+/* Style the social media icons */
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.social-icons a:hover {
+  color: #ddd;
+}
+
+/* Style the logo */
+.logo img {
+  width: 100px; /* Adjust logo size */
+}
+
+/* Style the title */
+nav h1 {
+  color: white;
+  font-size: 24px;
+  margin-left: 20px;
+}
+
+/* Style the nav links */
+ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+ul li {
+  margin-left: 20px;
+}
+
+ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+ul li input {
+  padding: 5px;
+}
+
+ul li button {
+  padding: 6px 12px;
+  background-color: #555;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+ul li button:hover {
+  background-color: #777;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+}
+
+Koplietot
+
+
+Tu teici:
+html add logo to nav bar
+ChatGPT saka:
+ChatGPT
+To add a logo to the navigation bar (nav bar) in HTML, you can use the following steps:
+
+Create a <nav> element for the navigation bar.
+Inside the <nav>, include an <img> tag to display the logo.
+Style the navigation bar using CSS to position and align the logo as desired.
+Here’s an example of how you can achieve this:
+
+HTML Structure
+html
+Kopēt kodu
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo in Nav Bar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>
+CSS (style.css)
+css
+Kopēt kodu
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style the nav bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+/* Style the logo */
+.logo img {
+    width: 100px; /* Set logo size */
+}
+
+/* Style the nav links */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links li a:hover {
+    text-decoration: underline;
+}
+Explanation:
+HTML Structure:
+
+The <nav> element contains two parts: the div with the class logo for the logo and an unordered list (<ul>) for the navigation links.
+The <img> tag is used to insert the logo image (logo.png). You can replace "logo.png" with the path to your logo image.
+The <ul> contains a list of navigation links (<li> and <a> tags).
+CSS Styling:
+
+The nav is styled to be a flexbox container, aligning items (logo and links) horizontally with justify-content: space-between; which places the logo on the left and the links on the right.
+The logo's size is set using the width property inside .logo img.
+The navigation links are displayed inline using display: flex, and their default bullet points are removed using list-style: none;.
+You can adjust the width of the logo and style the navbar further depending on your design needs.
+
+
+
+
+
+
+Tu teici:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TravelWeb</title>
+  <link rel="stylesheet" href="./travel_recommendation.css">
+  
+</head>
+<body>
+   <div class = "logo"><a href = "#"><img src="/image/logo.png">
+   <nav><h1>TravelWeb</h1>
+  
+<ul>
+  <li><a href="./travel_recommendation.html" id="home">Home </a></li>
+  <li><a href="./travel_about.html" id="about">About Us </a></li>
+  <li><a href="./travel_recommendation_contact.html" id="contact">Contact Us </a></li>
+  <li><input type="text" id="destinationInput" placeholder="Enter a destination or keyword">  </li>
+  <li><button id='btnSearch'>Search</button>
+  <li><button id='btnReset'>Reset</button>
+  </li>
+
+</ul>
+</nav>
+
+</body>
+</html>
+ChatGPT saka:
+ChatGPT
+It looks like you have a good start for your website's navigation bar. However, there are some corrections and improvements you can make to ensure your HTML structure is correct, and the logo is properly integrated with the navigation bar.
+
+Here’s a corrected and improved version of your HTML code:
+
+Corrected HTML Code:
+html
+Kopēt kodu
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelWeb</title>
+  <link rel="stylesheet" href="./travel_recommendation.css">
+</head>
+<body>
+  
+  <nav>
+    <div class="logo">
+      <a href="#"><img src="/image/logo.png" alt="TravelWeb Logo"></a>
+    </div>
+    <h1>TravelWeb</h1>
+    <ul>
+      <li><a href="./travel_recommendation.html" id="home">Home</a></li>
+      <li><a href="./travel_about.html" id="about">About Us</a></li>
+      <li><a href="./travel_recommendation_contact.html" id="contact">Contact Us</a></li>
+      <li><input type="text" id="destinationInput" placeholder="Enter a destination or keyword"></li>
+      <li><button id="btnSearch">Search</button></li>
+      <li><button id="btnReset">Reset</button></li>
+    </ul>
+  </nav>
+
+</body>
+</html>
+Key Changes:
+Closing tags:
+
+You were missing a closing </li> tag after the "Search" button. I added the correct structure.
+Logo placement:
+
+The <img> tag for the logo is now wrapped inside an anchor (<a>) element. The anchor ensures that clicking on the logo will take the user back to the homepage.
+Also, I included an alt attribute for the image, which is important for accessibility and SEO.
+CSS Styling Suggestion: You will likely want to style the navigation bar so the logo, title, and menu items are positioned nicely. Here’s an example CSS you can use to improve the layout:
+
+css
+Kopēt kodu
+/* Reset some default styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style the nav bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  color: white;
+}
+
+/* Style the logo */
+.logo img {
+  width: 100px; /* Adjust logo size */
+}
+
+/* Style the title */
+nav h1 {
+  color: white;
+  font-size: 24px;
+  margin-left: 20px;
+}
+
+/* Style the nav links */
+ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+ul li {
+  margin-left: 20px;
+}
+
+ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+ul li input {
+  padding: 5px;
+}
+
+ul li button {
+  padding: 6px 12px;
+  background-color: #555;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+ul li button:hover {
+  background-color: #777;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+}
+What the CSS Does:
+nav { display: flex; }: Uses flexbox to position elements horizontally.
+.logo img { width: 100px; }: Adjusts the size of the logo.
+ul { display: flex; }: Ensures the navigation links are inline.
+ul li button {}: Styles the search and reset buttons.
+This should make your navigation bar look more polished and professional, with the logo, site title, and navigation items aligned properly.
+
+
+
+
+
+
+Tu teici:
+for this example add icons of social medium in left side  
+ChatGPT saka:
+ChatGPT
+To add social media icons to the left side of your navigation bar, you can use Font Awesome, a popular icon library that provides various social media icons. Here’s how you can add them:
+
+Steps:
+Include Font Awesome in your project: You can link to the Font Awesome CDN in your <head> section.
+
+Add social media icons: Insert the social media icons on the left side of the navbar, before the logo.
+
+Updated HTML with Social Media Icons:
+html
+Kopēt kodu
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelWeb</title>
+  <!-- Include Font Awesome for social media icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="./travel_recommendation.css">
+</head>
+<body>
+  
+  <nav>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+    <div class="logo">
+      <a href="#"><img src="/image/logo.png" alt="TravelWeb Logo"></a>
+    </div>
+    <h1>TravelWeb</h1>
+    <ul>
+      <li><a href="./travel_recommendation.html" id="home">Home</a></li>
+      <li><a href="./travel_about.html" id="about">About Us</a></li>
+      <li><a href="./travel_recommendation_contact.html" id="contact">Contact Us</a></li>
+      <li><input type="text" id="destinationInput" placeholder="Enter a destination or keyword"></li>
+      <li><button id="btnSearch">Search</button></li>
+      <li><button id="btnReset">Reset</button></li>
+    </ul>
+  </nav>
+
+</body>
+</html>
+CSS for Social Media Icons and Layout:
+css
+Kopēt kodu
+/* Reset some default styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style the nav bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  color: white;
+}
+
+/* Style the social media icons */
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.social-icons a:hover {
+  color: #ddd;
+}
+
+/* Style the logo */
+.logo img {
+  width: 100px; /* Adjust logo size */
+}
+
+/* Style the title */
+nav h1 {
+  color: white;
+  font-size: 24px;
+  margin-left: 20px;
+}
+
+/* Style the nav links */
+ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+ul li {
+  margin-left: 20px;
+}
+
+ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+ul li input {
+  padding: 5px;
+}
+
+ul li button {
+  padding: 6px 12px;
+  background-color: #555;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+ul li button:hover {
+  background-color: #777;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+}
+Explanation:
+Font Awesome: The link to Font Awesome is added in the <head> section, which provides the social media icons (Facebook, Twitter, Instagram in this case).
+
+Social Media Icons HTML: The div with the class .social-icons contains anchor (<a>) tags, each wrapping a Font Awesome icon (<i> tags with classes like fab fa-facebook-f for Facebook).
+
+CSS for .social-icons:
+
+The icons are aligned with the display: flex property and have a gap of 10px between them.
+You can hover over the icons to change their color using the hover effect.
+Positioning: The social media icons are placed at the far left of the navigation bar before the logo.
+
+This code will create a navigation bar with social media icons on the left, followed by the logo, title, and the navigation menu. You can add more icons or customize the design further as needed!
+
+
+
+
+
+
+Tu teici:
+in code: 
+ChatGPT saka:
+ChatGPT
+Here's a clear and simplified version of your code, with social media icons on the left side of the navigation bar, followed by the logo and the navigation menu:
+
+Complete HTML and CSS Code:
+html
+Kopēt kodu
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelWeb</title>
+  <!-- Include Font Awesome for social media icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="./travel_recommendation.css">
+</head>
+<body>
+  
+  <nav>
+    <!-- Social Media Icons -->
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+    
+    <!-- Logo -->
+    <div class="logo">
+      <a href="#"><img src="/image/logo.png" alt="TravelWeb Logo"></a>
+    </div>
+
+    <!-- Navigation Links -->
+    <ul>
+      <li><a href="./travel_recommendation.html" id="home">Home</a></li>
+      <li><a href="./travel_about.html" id="about">About Us</a></li>
+      <li><a href="./travel_recommendation_contact.html" id="contact">Contact Us</a></li>
+      <li><input type="text" id="destinationInput" placeholder="Enter a destination or keyword"></li>
+      <li><button id="btnSearch">Search</button></li>
+      <li><button id="btnReset">Reset</button></li>
+    </ul>
+  </nav>
+
+</body>
+</html>
+CSS for Styling:
+css
+Kopēt kodu
+/* Reset some default styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style the nav bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  color: white;
+}
+
+/* Style the social media icons */
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.social-icons a:hover {
+  color: #ddd;
+}
+
+/* Style the logo */
+.logo img {
+  width: 100px; /* Adjust logo size */
+}
+
+/* Style the nav links */
+ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+ul li {
+  margin-left: 20px;
+}
+
+ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+ul li input {
+  padding: 5px;
+}
+
+ul li button {
+  padding: 6px 12px;
+  background-color: #555;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+ul li button:hover {
+  background-color: #777;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+}
+Explanation:
+Font Awesome: Font Awesome is included in the <head> section to enable the use of social media icons.
+
+Social Media Icons:
+
+The icons are wrapped inside a div with the class .social-icons.
+Each icon is represented using the <i> tag with the appropriate Font Awesome class (e.g., fa-facebook-f, fa-twitter, etc.).
+Flexbox Layout:
+
+The nav element uses display: flex to align the social icons, logo, and navigation links in a horizontal row.
+The justify-content: space-between; ensures the social icons are on the left, and the logo, title, and navigation links are on the right.
+Positioning:
+
+The social media icons appear on the far left.
+The navigation links are positioned using margin-left: auto; to push them to the right after the logo.
+Hover Effect:
+
+The social media icons and navigation links have a hover effect that changes their color when hovered over (color: #ddd; for social icons and text-decoration: underline; for nav links).
+This will create a clean layout with the social media icons on the left, the logo in the middle, and the navigation links on the right. You can further customize the styles to match your website design.
+
+
+
+
+
+
+Tu teici:
+in code <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelWeb</title>
+  <!-- Include Font Awesome for social media icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="./travel_recommendation.css">
+</head>
+<body>
+  
+  <nav>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+    <div class="logo">
+      <a href="#"><img src="/image/logo.png" alt="TravelWeb Logo"></a>
+    </div>
+    <h1>TravelWeb</h1>
+    <ul>
+      <li><a href="./travel_recommendation.html" id="home">Home</a></li>
+      <li><a href="./travel_about.html" id="about">About Us</a></li>
+      <li><a href="./travel_recommendation_contact.html" id="contact">Contact Us</a></li>
+      <li><input type="text" id="destinationInput" placeholder="Enter a destination or keyword"></li>
+      <li><button id="btnSearch">Search</button></li>
+      <li><button id="btnReset">Reset</button></li>
+    </ul>
+  </nav>
+
+  <div class="container">\
+    
+        <h1>Explore Dream Destination</h1>
+    
+     
+        <button id="booknow">Book Now</button>
+    
+    </div>
+</body>
+</html> pocition of div class=container to center of screen 
+ 
+ChatGPT saka:
+ChatGPT
+To center the div with the class container both horizontally and vertically on the screen, you can use CSS Flexbox or Grid layout. I'll provide a solution using Flexbox, which is straightforward and commonly used for this type of layout.
+
+Update Your CSS:
+You need to apply Flexbox on the parent element (in this case, body) to center the .container both horizontally and vertically.
+You can add the following CSS rules to your travel_recommendation.css file.
+CSS Code for Centering .container:
+css
+Kopēt kodu
+/* Centering the .container in the screen */
+body {
+  height: 100vh; /* Set the height of body to fill the viewport */
+  display: flex; /* Use Flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin: 0;
+}
+
+/* Style the container */
+.container {
+  text-align: left;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+  font-size: 36px;
+  color: #333;
+}
+
+.container button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.container button:hover {
+  background-color: #555;
+}
+
+
+button {
+    padding: 7px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
