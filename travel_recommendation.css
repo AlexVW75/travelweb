@@ -66,9 +66,34 @@ nav ul li button {
     cursor: pointer;
 }
 
+.aboutus {
+    position: relative;
+    width: 100%;
+    height:100%;
+    justify-content: space-between;
+    display:flex;
+    align-items: center;
+    border-color: red;
+    padding: 70px 0% 5% 10%;
+    color: white;
+}
 
+.aboutus-content {
+    max-width: 600 px;
+}
 
+.aboutus-content h1 {
+    font-size: 62px;
+    font-weight: 700;
+    margin: -3px 0;
+    
 
+}
+
+.aboutus-content p{
+    font-size:20px;
+
+}
 
 
 #box1 {
