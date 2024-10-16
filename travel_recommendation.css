@@ -95,6 +95,11 @@ nav ul li button {
 
 }
 
+#main-content{
+    display:flex;
+    justify-content: space-between;
+    padding:20px;
+}
 
 #box1 {
     position: absolute;
@@ -324,6 +329,27 @@ form {
 
 .btn.dorne-btn:hover {
     background-color: #e64a19;
+}
+
+@media (max-width: 768px) {
+    .btn.dorne-btn {
+        width: 100%;
+    }
+}
+
+#content{
+    flex:1;
+    margin-right: 20px;
+}
+
+#report-container{
+    width:30%;
+    padding:20px;
+    border: 1px solid#ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 0px;
 }
 
 @media (max-width: 768px) {
